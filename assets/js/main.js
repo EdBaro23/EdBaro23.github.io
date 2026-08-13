@@ -1,5 +1,5 @@
 /* ============================================================
-   Eduard Baroyan, engineering portfolio
+   Eduard Baroyan — engineering portfolio
    ============================================================ */
 
 (function () {
@@ -93,39 +93,6 @@
     }, { rootMargin: "-45% 0px -50% 0px" });
 
     sections.forEach(function (s) { spy.observe(s); });
-  }
-
-  /* ---------- click a figure to view it full size ---------- */
-
-  var figures = document.querySelectorAll("figure img");
-  if (figures.length) {
-    var box = document.createElement("div");
-    box.className = "lightbox";
-    box.innerHTML = '<button class="lightbox__close" aria-label="Close image">&times;</button><img alt="">';
-    document.body.appendChild(box);
-
-    var full = box.querySelector("img");
-
-    var open = function (src, alt) {
-      full.src = src;
-      full.alt = alt || "";
-      box.classList.add("open");
-      document.body.style.overflow = "hidden";
-    };
-
-    var close = function () {
-      box.classList.remove("open");
-      document.body.style.overflow = "";
-    };
-
-    Array.prototype.forEach.call(figures, function (img) {
-      img.addEventListener("click", function () { open(img.currentSrc || img.src, img.alt); });
-    });
-
-    box.addEventListener("click", close);
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") close();
-    });
   }
 
   /* ---------- hero: drifting node field ----------

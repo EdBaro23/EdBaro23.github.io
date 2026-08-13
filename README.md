@@ -2,15 +2,14 @@
 
 Source for my portfolio site: **https://edbaro23.github.io**
 
-A static site with no build step and no dependencies: plain HTML, one stylesheet and one script.
-GitHub Pages serves it straight from `main`.
+A single-page static site with no build step and no dependencies: plain HTML, one stylesheet and one
+script. GitHub Pages serves it straight from `main`.
 
 ```
-index.html              landing page
-projects/*.html         one page per project
+index.html              the whole site
 assets/css/style.css    all styling
-assets/js/main.js       hero canvas, scroll reveals, nav, lightbox
-assets/img/             project figures
+assets/js/main.js       hero canvas, scroll reveals, nav
+assets/img/             card images
 ```
 
 ## Working on it locally
@@ -26,5 +25,4 @@ python -m http.server 8000
 
 - The hero background is drawn procedurally on a `<canvas>`, so the site depends on no stock imagery.
 - Every animation is disabled automatically when the visitor has `prefers-reduced-motion` set.
-- The same projects are also written up as markdown in
-  [EdBaro23/engineering-portfolio](https://github.com/EdBaro23/engineering-portfolio).
+- Projects are listed as cards only. There are no per-project pages, by choice.
