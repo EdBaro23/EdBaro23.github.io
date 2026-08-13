@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.className = "js";</script>
-<title>Robot Testing Simulator — Eduard Baroyan</title>
+<title>Robot Testing Simulator | Eduard Baroyan</title>
 <meta name="description" content="Turns a robot's design files into a driveable virtual copy and runs it against a real ROS stack, so a design iteration can be tested before anyone manufactures it.">
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Robot Testing Simulator — Eduard Baroyan">
+<meta property="og:title" content="Robot Testing Simulator | Eduard Baroyan">
 <meta property="og:description" content="Turns a robot's design files into a driveable virtual copy and runs it against a real ROS stack.">
 <meta property="og:image" content="https://edbaro23.github.io/assets/img/robot-testing-simulator/robot-model.jpg">
 
@@ -53,7 +53,7 @@
   <div class="shell narrow">
 
     <dl class="meta reveal">
-      <div><dt>Type</dt><dd>Professional &mdash; digital division of a logistics group</dd></div>
+      <div><dt>Type</dt><dd>Professional, digital division of a logistics group</dd></div>
       <div><dt>Role</dt><dd>Developer, with the robotics team</dd></div>
       <div><dt>Interfaces with</dt><dd>ROS, URDF robot descriptions</dd></div>
     </dl>
@@ -71,7 +71,7 @@
       <h2 class="reveal">What I built</h2>
       <p class="reveal">
         I joined the robotics team to close that gap. The simulator builds a 3D copy of a warehouse robot
-        directly from the design files the team already maintained, and connects that copy to ROS &mdash;
+        directly from the design files the team already maintained, and connects that copy to ROS,
         the same open-source robot operating system running on the real hardware. Because the simulated
         robot speaks to the same stack as the physical one, the team can put a design through its paces
         before committing to manufacturing it.
@@ -84,10 +84,10 @@
 
       <h2 class="reveal">Key capabilities</h2>
       <ul class="reveal">
-        <li><strong>Model generation from URDF</strong> &mdash; builds the 3D robot automatically from a Unified Robotics Description Format file, so the simulated robot follows the design files rather than being modelled by hand and drifting out of date.</li>
-        <li><strong>Live ROS interface</strong> &mdash; the system connects to a running ROS instance, so the control software under test is the real thing rather than a stand-in.</li>
-        <li><strong>Full motor actuation</strong> &mdash; every motor on the robot can be driven, and the model can be controlled directly from the keyboard for hands-on testing.</li>
-        <li><strong>Object tracking with a mini-map</strong> &mdash; tracked objects are displayed in a map in the top-right corner, giving a view of what the robot has registered in its environment alongside what is actually there.</li>
+        <li><strong>Model generation from URDF:</strong> builds the 3D robot automatically from a Unified Robotics Description Format file, so the simulated robot follows the design files rather than being modelled by hand and drifting out of date.</li>
+        <li><strong>Live ROS interface:</strong> the system connects to a running ROS instance, so the control software under test is the real thing rather than a stand-in.</li>
+        <li><strong>Full motor actuation:</strong> every motor on the robot can be driven, and the model can be controlled directly from the keyboard for hands-on testing.</li>
+        <li><strong>Object tracking with a mini-map:</strong> tracked objects are displayed in a map in the top-right corner, giving a view of what the robot has registered in its environment alongside what is actually there.</li>
       </ul>
 
       <figure class="figure-wide reveal">
@@ -98,7 +98,7 @@
       <h2 class="reveal">Why generating from URDF mattered</h2>
       <p class="reveal">
         The decision that carried the most weight was building the robot from its URDF rather than modelling
-        it in the simulator. A hand-built model is accurate exactly once &mdash; the moment the mechanical
+        it in the simulator. A hand-built model is accurate exactly once. The moment the mechanical
         design changes, the simulation is quietly testing a robot that no longer exists, and nobody finds
         out until the physical prototype behaves differently. Reading the same description file the rest of
         the toolchain uses means the simulation follows the design automatically, and a new iteration is

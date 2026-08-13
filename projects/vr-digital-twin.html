@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.className = "js";</script>
-<title>Virtual Reality Digital Twin — Eduard Baroyan</title>
+<title>Virtual Reality Digital Twin | Eduard Baroyan</title>
 <meta name="description" content="A walkthrough digital twin of a working warehouse: reconstructed from laser scans, replayed from recorded location data, and inspected from inside a VR headset.">
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Virtual Reality Digital Twin — Eduard Baroyan">
+<meta property="og:title" content="Virtual Reality Digital Twin | Eduard Baroyan">
 <meta property="og:description" content="A walkthrough digital twin of a working warehouse, reconstructed from laser scans and replayed from recorded location data.">
 <meta property="og:image" content="https://edbaro23.github.io/assets/img/vr-digital-twin/warehouse-twin.jpg">
 
@@ -53,7 +53,7 @@
   <div class="shell narrow">
 
     <dl class="meta reveal">
-      <div><dt>Type</dt><dd>Professional &mdash; digital division of a logistics group</dd></div>
+      <div><dt>Type</dt><dd>Professional, digital division of a logistics group</dd></div>
       <div><dt>Role</dt><dd>Sole developer</dd></div>
       <div><dt>Target hardware</dt><dd>HTC Vive and other SteamVR headsets</dd></div>
       <div><dt>Outcome</dt><dd>Presented to the CEO and CDO; pilot trials scoped</dd></div>
@@ -74,7 +74,7 @@
       <p class="reveal">
         VRDT reconstructs a real warehouse as a 3D environment from laser scans and photography, then
         replays the recorded movement of its vehicles and goods through that environment. A manager puts on
-        a headset, stands inside a copy of their own warehouse, and watches a shift play back &mdash;
+        a headset, stands inside a copy of their own warehouse, and watches a shift play back,
         pausing it, slowing it down and walking into the aisles to see where the queues actually form.
       </p>
 
@@ -86,10 +86,10 @@
       <h2 class="reveal">Key capabilities</h2>
       <ul class="reveal">
         <li><strong>Twin generation</strong> from location data, photography and laser scans.</li>
-        <li><strong>Playback control</strong> &mdash; play, pause, fast-forward and slow down the recording, so a manager can skim a quiet hour and then crawl through the minute where a queue forms.</li>
-        <li><strong>Grab-to-zoom</strong> &mdash; squeeze the controller and pull upwards or downwards to scale the whole warehouse, moving between standing in an aisle and looking down on the entire floor plan.</li>
+        <li><strong>Playback control:</strong> play, pause, fast-forward and slow down the recording, so a manager can skim a quiet hour and then crawl through the minute where a queue forms.</li>
+        <li><strong>Grab-to-zoom:</strong> squeeze the controller and pull upwards or downwards to scale the whole warehouse, moving between standing in an aisle and looking down on the entire floor plan.</li>
         <li><strong>Teleport-based locomotion</strong>, chosen over smooth movement specifically to reduce motion sickness in users who would not be regular VR users.</li>
-        <li><strong>Object inspection</strong> &mdash; placing your hand on a vehicle or a pallet reveals its details.</li>
+        <li><strong>Object inspection:</strong> placing your hand on a vehicle or a pallet reveals its details.</li>
       </ul>
 
       <div class="figure-pair reveal">
@@ -114,8 +114,8 @@
         would actually need from a tool like this, rather than designing to what was easiest to render.
       </p>
       <p class="reveal">
-        The application itself is written in C# in the Unity engine. Python handles the location data
-        &mdash; creating it, editing it and reshaping it for testing. The environment comes from the
+        The application itself is written in C# in the Unity engine. Python handles the location data:
+        creating it, editing it and reshaping it for testing. The environment comes from the
         company's existing 3D scan pipeline, which I connected the system to with colleagues who owned that
         pipeline.
       </p>
@@ -137,8 +137,8 @@
         <strong>No real location data existed while I was building.</strong> The sensor pipeline that would
         eventually feed VRDT did not exist yet, so I wrote a Python tool to generate and edit synthetic
         location data. That unblocked development entirely, and it also turned out to be the better testing
-        story: I could author the exact scenario I wanted &mdash; two vehicles converging on one aisle, a
-        dropped sample, an implausibly fast movement &mdash; and reproduce it on demand, which recorded data
+        story: I could author the exact scenario I wanted (two vehicles converging on one aisle, a
+        dropped sample, an implausibly fast movement) and reproduce it on demand, which recorded data
         would not have let me do.
       </p>
 

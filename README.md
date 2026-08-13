@@ -2,7 +2,7 @@
 
 Source for my portfolio site: **https://edbaro23.github.io**
 
-A static site with no build step and no dependencies — plain HTML, one stylesheet and one script.
+A static site with no build step and no dependencies: plain HTML, one stylesheet and one script.
 GitHub Pages serves it straight from `main`.
 
 ```
@@ -15,7 +15,7 @@ assets/img/             project figures
 
 ## Working on it locally
 
-No tooling required — open `index.html` in a browser, or serve the folder if you want the paths to
+No tooling required. Open `index.html` in a browser, or serve the folder if you want the paths to
 behave exactly as they do in production:
 
 ```bash
