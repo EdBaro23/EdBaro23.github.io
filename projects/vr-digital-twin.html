@@ -63,19 +63,17 @@
 
       <h2 class="reveal">The problem</h2>
       <p class="reveal">
-        How much a warehouse can move in a day is limited by how it is arranged. When several warehouse
-        vehicles need the same aisle or the same stretch of floor at the same time, queues form. The cost of
-        that congestion is real but hard to see: it is spread in thirty-second increments across a whole
-        shift, so it shows up in the totals at the end of the month rather than anywhere a manager can point
-        at.
+        How much a warehouse can move in a day is limited by how it is arranged. When several vehicles
+        need the same aisle at the same time, queues form. That congestion accumulates in thirty-second
+        increments, so it lands in the monthly totals without ever being visible on the floor.
       </p>
 
       <h2 class="reveal">What I built</h2>
       <p class="reveal">
-        VRDT reconstructs a real warehouse as a 3D environment from laser scans and photography, then
-        replays the recorded movement of its vehicles and goods through that environment. A manager puts on
-        a headset, stands inside a copy of their own warehouse, and watches a shift play back,
-        pausing it, slowing it down and walking into the aisles to see where the queues actually form.
+        VRDT reconstructs a real warehouse in 3D from laser scans and photography, then replays the
+        recorded movement of its vehicles and goods through it. A manager puts on a headset, stands inside
+        a copy of their own warehouse and watches a shift back: pausing, slowing it down, walking into the
+        aisles where the queues form.
       </p>
 
       <figure class="figure-wide reveal">
@@ -86,9 +84,9 @@
       <h2 class="reveal">Key capabilities</h2>
       <ul class="reveal">
         <li><strong>Twin generation</strong> from location data, photography and laser scans.</li>
-        <li><strong>Playback control:</strong> play, pause, fast-forward and slow down the recording, so a manager can skim a quiet hour and then crawl through the minute where a queue forms.</li>
-        <li><strong>Grab-to-zoom:</strong> squeeze the controller and pull upwards or downwards to scale the whole warehouse, moving between standing in an aisle and looking down on the entire floor plan.</li>
-        <li><strong>Teleport-based locomotion</strong>, chosen over smooth movement specifically to reduce motion sickness in users who would not be regular VR users.</li>
+        <li><strong>Playback control:</strong> play, pause, fast-forward and slow down, so a quiet hour can be skimmed and a bad minute crawled through.</li>
+        <li><strong>Grab-to-zoom:</strong> squeeze the controller and pull to scale the warehouse, between standing in an aisle and looking down on the whole floor plan.</li>
+        <li><strong>Teleport-based locomotion</strong>, chosen over smooth movement to reduce motion sickness in users who are not regular VR users.</li>
         <li><strong>Object inspection:</strong> placing your hand on a vehicle or a pallet reveals its details.</li>
       </ul>
 
@@ -110,14 +108,11 @@
 
       <h2 class="reveal">How it was built</h2>
       <p class="reveal">
-        I started by consulting professionals working in logistics to establish what a warehouse manager
-        would actually need from a tool like this, rather than designing to what was easiest to render.
-      </p>
-      <p class="reveal">
-        The application itself is written in C# in the Unity engine. Python handles the location data:
-        creating it, editing it and reshaping it for testing. The environment comes from the
-        company's existing 3D scan pipeline, which I connected the system to with colleagues who owned that
-        pipeline.
+        I consulted logistics professionals first, so the tool was designed around what a warehouse
+        manager needs rather than what was easiest to render. The application is C# in Unity. Python
+        handles the location data: creating, editing and reshaping it for testing. The environment comes
+        from the company's existing 3D scan pipeline, which I connected to with the colleagues who owned
+        it.
       </p>
 
       <figure class="reveal">
@@ -128,25 +123,21 @@
       <h2 class="reveal">Engineering challenges</h2>
       <p class="reveal">
         <strong>Location data is sampled, movement is continuous.</strong> Positions are recorded at
-        discrete intervals, so replaying them literally makes every vehicle teleport from sample to sample.
-        I built interpolation between the recorded points, which turns a sequence of positions into
-        continuous motion and makes it possible to scrub playback to any moment rather than only to a
-        recorded sample.
+        discrete intervals, so replaying them literally makes every vehicle teleport between samples.
+        Interpolating between the recorded points turns them into continuous motion, and makes playback
+        scrubbable to any moment rather than only to a sample.
       </p>
       <p class="reveal">
         <strong>No real location data existed while I was building.</strong> The sensor pipeline that would
-        eventually feed VRDT did not exist yet, so I wrote a Python tool to generate and edit synthetic
-        location data. That unblocked development entirely, and it also turned out to be the better testing
-        story: I could author the exact scenario I wanted (two vehicles converging on one aisle, a
-        dropped sample, an implausibly fast movement) and reproduce it on demand, which recorded data
-        would not have let me do.
+        feed VRDT did not exist yet, so I wrote a Python tool to generate and edit synthetic data. It also
+        turned out to be better for testing: I could author a specific scenario (two vehicles converging on
+        one aisle, a dropped sample, an implausibly fast movement) and reproduce it on demand.
       </p>
 
       <h2 class="reveal">Where it got to</h2>
       <p class="reveal">
-        I presented VRDT to the digital division once the first prototype worked, and then to the Chief
-        Executive Officer and Chief Digital Officer, who asked me to prepare pilot trials in two of the
-        client warehouses the company operated.
+        I presented VRDT to the digital division once the prototype worked, then to the Chief Executive
+        Officer and Chief Digital Officer, who asked me to prepare pilot trials in two client warehouses.
       </p>
 
       <figure class="reveal">
@@ -155,15 +146,14 @@
       </figure>
 
       <p class="reveal">
-        The planned next steps were to work with the company's Sensors team on a pipeline for collecting
-        real location data, to run the pilot against that real data, and then to integrate the system with
-        the company's warehouses properly.
+        Next steps were a pipeline with the company's Sensors team for collecting real location data, the
+        pilot run against that data, and then full integration with the warehouses.
       </p>
 
     </div>
 
     <nav class="pager reveal">
-      <a href="../index.html#work"><span>Back to</span><strong>All projects</strong></a>
+      <a href="game-demos.html"><span>Previous project</span><strong>&larr; 50+ Game Demos</strong></a>
       <a href="robot-testing-simulator.html"><span>Next project</span><strong>Robot Testing Simulator &rarr;</strong></a>
     </nav>
 

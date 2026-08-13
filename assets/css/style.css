@@ -1,5 +1,5 @@
 /* ============================================================
-   Eduard Baroyan, engineering portfolio
+   Eduard Baroyan — engineering portfolio
    ============================================================ */
 
 :root {
@@ -384,6 +384,58 @@ section { padding: 110px 0; position: relative; }
 
 .tag--pro { background: var(--accent-soft); color: var(--accent); border: 1px solid rgba(34, 211, 238, 0.3); }
 .tag--personal { background: var(--warm-soft); color: var(--warm); border: 1px solid rgba(251, 146, 60, 0.3); }
+.tag--contract { background: rgba(159, 178, 199, 0.12); color: var(--text-dim); border: 1px solid var(--border-hi); }
+
+/* Projects with no figure to show get a drawn panel instead of a photograph. */
+
+.card__media--glyph {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(420px 210px at 28% 18%, rgba(34, 211, 238, 0.16), transparent 72%),
+    linear-gradient(158deg, var(--surface-hi), var(--bg-soft));
+}
+
+.card__media--glyph::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(159, 178, 199, 0.22) 1px, transparent 1px);
+  background-size: 20px 20px;
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 25%, transparent 76%);
+  mask-image: radial-gradient(circle at 50% 45%, #000 25%, transparent 76%);
+}
+
+.card__media--glyph svg {
+  position: relative;
+  z-index: 1;
+  width: 62px;
+  height: 62px;
+  color: var(--text-faint);
+  transition: transform 0.6s var(--ease), color 0.4s;
+}
+
+.card:hover .card__media--glyph svg { transform: scale(1.07); color: var(--accent); }
+
+/* A card with no page behind it, so nothing should suggest it is clickable. */
+
+.card--static { cursor: default; }
+
+.card--static:hover {
+  transform: none;
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+.card--static:hover .card__media--glyph svg { transform: none; color: var(--text-faint); }
+
+.card__note {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
 
 .card__body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
 
@@ -566,7 +618,7 @@ figcaption {
   margin-bottom: 7px;
 }
 
-.meta dd { margin: 0; font-size: 14.5px; color: var(--text); }
+.meta dd { margin: 0; font-size: 14.5px; color: var(--text); overflow-wrap: anywhere; }
 
 /* ---------- project page header ---------- */
 
@@ -599,6 +651,21 @@ figcaption {
   background:
     radial-gradient(700px 320px at 20% 30%, rgba(34, 211, 238, 0.13), transparent 70%),
     linear-gradient(180deg, rgba(6, 9, 15, 0.7) 0%, rgba(6, 9, 15, 0.86) 55%, var(--bg) 100%);
+}
+
+/* Pages with no figure use a drawn grid behind the title instead of a photograph. */
+
+.page-hero--plain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(159, 178, 199, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159, 178, 199, 0.075) 1px, transparent 1px);
+  background-size: 58px 58px;
+  -webkit-mask-image: radial-gradient(120% 90% at 18% 0%, #000 10%, transparent 72%);
+  mask-image: radial-gradient(120% 90% at 18% 0%, #000 10%, transparent 72%);
 }
 
 .page-hero .shell { position: relative; z-index: 2; }
