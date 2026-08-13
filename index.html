@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className = "js";</script>
+<title>Eduard Baroyan — Engineering &amp; Software Portfolio</title>
+<meta name="description" content="Simulation, XR and robotics software: warehouse digital twins in virtual reality, a ROS robot testing simulator, a custom augmented reality headset, and an economic simulator.">
+<meta name="author" content="Eduard Baroyan">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eduard Baroyan — Engineering &amp; Software Portfolio">
+<meta property="og:description" content="Simulation, XR and robotics software: warehouse digital twins in virtual reality, a ROS robot testing simulator, a custom augmented reality headset, and an economic simulator.">
+<meta property="og:image" content="https://edbaro23.github.io/assets/img/vr-digital-twin/warehouse-twin.jpg">
+<meta property="og:url" content="https://edbaro23.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2306090f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2322d3ee' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%2322d3ee'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="progress"></div>
+
+<nav class="nav">
+  <a class="nav__brand" href="#top"><span class="nav__dot"></span> Eduard Baroyan</a>
+  <div class="nav__links">
+    <a href="#work">Work</a>
+    <a href="#background">Background</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <div class="shell">
+    <p class="eyebrow rise d1">Eduard Baroyan</p>
+    <h1 class="rise d2">Simulation, XR and <span class="grad">robotics software</span></h1>
+    <p class="rise d3">
+      I build software that makes physical systems easier to understand before you commit to them:
+      warehouse digital twins you can walk through in virtual reality, a robot simulator that lets a
+      design be tested before it is manufactured, an augmented reality headset assembled from an Arduino
+      and a phone screen, and an economic simulator rebuilt from a hydraulic machine that was thrown away.
+    </p>
+    <div class="cta-row rise d4">
+      <a class="btn btn--primary" href="#work">
+        View the work
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="https://github.com/EdBaro23" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.6 4.7 18.6 5 18.6 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">Scroll<span></span></div>
+</header>
+
+<main>
+
+<section id="work">
+  <div class="shell">
+    <div class="section-head reveal">
+      <p class="eyebrow">Selected work</p>
+      <h2>Four projects</h2>
+      <p>
+        Two were built professionally, in the digital division of a logistics group. Two were built in my
+        own time. Each write-up covers the problem, the decisions behind the build, and where it ended up.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <a class="card reveal" href="projects/vr-digital-twin.html">
+        <div class="card__media">
+          <span class="tag tag--pro">Professional</span>
+          <img src="assets/img/vr-digital-twin/warehouse-twin.jpg" alt="Warehouse vehicles moving through the digital twin" loading="lazy" width="1101" height="709">
+        </div>
+        <div class="card__body">
+          <h3>Virtual Reality Digital Twin <span class="arrow">&rarr;</span></h3>
+          <p>
+            Rebuilds a real warehouse in VR from laser scans and replays the recorded movement of its
+            vehicles and goods, so managers can watch a shift back and find the congestion.
+          </p>
+          <div class="stack-row">
+            <span class="chip">C#</span><span class="chip">Unity</span><span class="chip">Python</span><span class="chip">SteamVR</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card reveal" data-delay="90" href="projects/robot-testing-simulator.html">
+        <div class="card__media">
+          <span class="tag tag--pro">Professional</span>
+          <img src="assets/img/robot-testing-simulator/robot-model.jpg" alt="A simulated warehouse robot" loading="lazy" width="1106" height="776">
+        </div>
+        <div class="card__body">
+          <h3>Robot Testing Simulator <span class="arrow">&rarr;</span></h3>
+          <p>
+            Generates a driveable virtual copy of a warehouse robot from its design files and drives it
+            through a real ROS stack, so iterations can be tested before anything is manufactured.
+          </p>
+          <div class="stack-row">
+            <span class="chip">C#</span><span class="chip">ROS</span><span class="chip">Linux</span><span class="chip">URDF</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card reveal" href="projects/ar-workstation.html">
+        <div class="card__media">
+          <span class="tag tag--personal">Personal</span>
+          <img src="assets/img/ar-workstation/headset-render-angled.jpg" alt="Render of the augmented reality glasses" loading="lazy" width="1092" height="688">
+        </div>
+        <div class="card__body">
+          <h3>Augmented Reality Workstation <span class="arrow">&rarr;</span></h3>
+          <p>
+            A tethered AR headset shaped like a pair of glasses that replaces a multi-monitor desk setup,
+            offloading all processing to the computer it plugs into.
+          </p>
+          <div class="stack-row">
+            <span class="chip">Unity</span><span class="chip">C#</span><span class="chip">Arduino</span><span class="chip">Blender</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card reveal" data-delay="90" href="projects/digital-phillips-machine.html">
+        <div class="card__media">
+          <span class="tag tag--personal">Personal</span>
+          <img src="assets/img/digital-phillips-machine/app.jpg" alt="The Digital Phillips Machine application" loading="lazy" width="1400" height="676">
+        </div>
+        <div class="card__body">
+          <h3>Digital Phillips Machine <span class="arrow">&rarr;</span></h3>
+          <p>
+            A software rebuild of the MONIAC &mdash; a hydraulic computer that models an economy in water
+            &mdash; after my school's original sprang one leak too many and was scrapped.
+          </p>
+          <div class="stack-row">
+            <span class="chip">C#</span><span class="chip">Unity</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="background">
+  <div class="shell narrow">
+    <div class="section-head reveal">
+      <p class="eyebrow">Background</p>
+      <h2>About this portfolio</h2>
+    </div>
+    <div class="prose reveal">
+      <p>
+        These projects started life as a PDF I put together around 2022 for university applications, and it
+        read like one &mdash; a cover letter, a &ldquo;skills gained&rdquo; section, and a lot of deference.
+        This site is that work rewritten for engineers: the same projects and the same figures, reorganised
+        around the problems, the trade-offs and the outcomes.
+      </p>
+      <p>
+        The projects themselves date from that period, so read them as a record of what I built then rather
+        than a description of what I am working on now.
+      </p>
+      <p>
+        The two professional projects were built for a company that is not named here, and its clients are
+        not named either. No source code is published, since that work is the property of my employer at the
+        time. The write-ups are detailed enough to stand on their own, and I am happy to talk through any of
+        the implementations directly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="stack">
+  <div class="shell">
+    <div class="section-head reveal">
+      <p class="eyebrow">Tools</p>
+      <h2>Stack</h2>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-card reveal"><h4>Languages</h4><p>C#, Python</p></div>
+      <div class="stack-card reveal" data-delay="70"><h4>Engines &amp; simulation</h4><p>Unity, SteamVR, ROS (Robot Operating System)</p></div>
+      <div class="stack-card reveal" data-delay="140"><h4>Hardware &amp; 3D</h4><p>Arduino, IMU sensors, Fresnel optics, 3D printing, Blender</p></div>
+      <div class="stack-card reveal" data-delay="210"><h4>Platforms</h4><p>Windows, Linux, HTC Vive and other SteamVR headsets</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="shell">
+    <div class="contact-box reveal">
+      <h2>Get in touch</h2>
+      <p>
+        Happy to talk through any of these projects in more detail, including the parts that are not
+        public here.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="mailto:eduardbaro4@gmail.com">Email me</a>
+        <a class="btn btn--ghost" href="https://github.com/EdBaro23" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="shell">
+    <div class="foot-row">
+      <span>&copy; Eduard Baroyan</span>
+      <span>Also available as a <a href="https://github.com/EdBaro23/engineering-portfolio">markdown repository</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

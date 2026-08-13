@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className = "js";</script>
+<title>Virtual Reality Digital Twin — Eduard Baroyan</title>
+<meta name="description" content="A walkthrough digital twin of a working warehouse: reconstructed from laser scans, replayed from recorded location data, and inspected from inside a VR headset.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Virtual Reality Digital Twin — Eduard Baroyan">
+<meta property="og:description" content="A walkthrough digital twin of a working warehouse, reconstructed from laser scans and replayed from recorded location data.">
+<meta property="og:image" content="https://edbaro23.github.io/assets/img/vr-digital-twin/warehouse-twin.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2306090f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2322d3ee' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%2322d3ee'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="progress"></div>
+
+<nav class="nav">
+  <a class="nav__brand" href="../index.html"><span class="nav__dot"></span> Eduard Baroyan</a>
+  <div class="nav__links">
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#background">Background</a>
+    <a href="../index.html#stack">Stack</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero__bg">
+    <img src="../assets/img/vr-digital-twin/warehouse-twin.jpg" alt="" aria-hidden="true">
+  </div>
+  <div class="shell">
+    <a class="back-link rise d1" href="../index.html#work">&larr; All projects</a>
+    <p class="eyebrow rise d2">Professional project</p>
+    <h1 class="rise d3">Virtual Reality Digital Twin</h1>
+    <p class="lead rise d4">
+      A walkthrough digital twin of a working warehouse: reconstructed from laser scans, replayed from
+      recorded location data, and inspected from inside a VR headset.
+    </p>
+  </div>
+</header>
+
+<main>
+<section style="padding-top: 56px;">
+  <div class="shell narrow">
+
+    <dl class="meta reveal">
+      <div><dt>Type</dt><dd>Professional &mdash; digital division of a logistics group</dd></div>
+      <div><dt>Role</dt><dd>Sole developer</dd></div>
+      <div><dt>Target hardware</dt><dd>HTC Vive and other SteamVR headsets</dd></div>
+      <div><dt>Outcome</dt><dd>Presented to the CEO and CDO; pilot trials scoped</dd></div>
+    </dl>
+
+    <div class="prose">
+
+      <h2 class="reveal">The problem</h2>
+      <p class="reveal">
+        How much a warehouse can move in a day is limited by how it is arranged. When several warehouse
+        vehicles need the same aisle or the same stretch of floor at the same time, queues form. The cost of
+        that congestion is real but hard to see: it is spread in thirty-second increments across a whole
+        shift, so it shows up in the totals at the end of the month rather than anywhere a manager can point
+        at.
+      </p>
+
+      <h2 class="reveal">What I built</h2>
+      <p class="reveal">
+        VRDT reconstructs a real warehouse as a 3D environment from laser scans and photography, then
+        replays the recorded movement of its vehicles and goods through that environment. A manager puts on
+        a headset, stands inside a copy of their own warehouse, and watches a shift play back &mdash;
+        pausing it, slowing it down and walking into the aisles to see where the queues actually form.
+      </p>
+
+      <figure class="figure-wide reveal">
+        <img src="../assets/img/vr-digital-twin/warehouse-twin.jpg" alt="Warehouse vehicles moving through the digital twin" loading="lazy">
+        <figcaption>Warehouse vehicles move around the twin exactly as they did in reality.</figcaption>
+      </figure>
+
+      <h2 class="reveal">Key capabilities</h2>
+      <ul class="reveal">
+        <li><strong>Twin generation</strong> from location data, photography and laser scans.</li>
+        <li><strong>Playback control</strong> &mdash; play, pause, fast-forward and slow down the recording, so a manager can skim a quiet hour and then crawl through the minute where a queue forms.</li>
+        <li><strong>Grab-to-zoom</strong> &mdash; squeeze the controller and pull upwards or downwards to scale the whole warehouse, moving between standing in an aisle and looking down on the entire floor plan.</li>
+        <li><strong>Teleport-based locomotion</strong>, chosen over smooth movement specifically to reduce motion sickness in users who would not be regular VR users.</li>
+        <li><strong>Object inspection</strong> &mdash; placing your hand on a vehicle or a pallet reveals its details.</li>
+      </ul>
+
+      <div class="figure-pair reveal">
+        <figure>
+          <img src="../assets/img/vr-digital-twin/playback-controls.jpg" alt="Playback controls inside the VR environment" loading="lazy">
+          <figcaption>Pausing playback from inside the VR environment.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img/vr-digital-twin/vehicle-details.jpg" alt="Vehicle details revealed by touch" loading="lazy">
+          <figcaption>Touching a vehicle's twin reveals its type and state.</figcaption>
+        </figure>
+      </div>
+
+      <figure class="figure-wide reveal">
+        <img src="../assets/img/vr-digital-twin/aisle-overhead.jpg" alt="Overhead view of warehouse aisles" loading="lazy">
+        <figcaption>Pulling the world down to look at several aisles at once.</figcaption>
+      </figure>
+
+      <h2 class="reveal">How it was built</h2>
+      <p class="reveal">
+        I started by consulting professionals working in logistics to establish what a warehouse manager
+        would actually need from a tool like this, rather than designing to what was easiest to render.
+      </p>
+      <p class="reveal">
+        The application itself is written in C# in the Unity engine. Python handles the location data
+        &mdash; creating it, editing it and reshaping it for testing. The environment comes from the
+        company's existing 3D scan pipeline, which I connected the system to with colleagues who owned that
+        pipeline.
+      </p>
+
+      <figure class="reveal">
+        <img src="../assets/img/vr-digital-twin/office-3d-scan.jpg" alt="A 3D scan of the division office" loading="lazy">
+        <figcaption>An early test using a 3D scan of our own division office, before scanning warehouse space.</figcaption>
+      </figure>
+
+      <h2 class="reveal">Engineering challenges</h2>
+      <p class="reveal">
+        <strong>Location data is sampled, movement is continuous.</strong> Positions are recorded at
+        discrete intervals, so replaying them literally makes every vehicle teleport from sample to sample.
+        I built interpolation between the recorded points, which turns a sequence of positions into
+        continuous motion and makes it possible to scrub playback to any moment rather than only to a
+        recorded sample.
+      </p>
+      <p class="reveal">
+        <strong>No real location data existed while I was building.</strong> The sensor pipeline that would
+        eventually feed VRDT did not exist yet, so I wrote a Python tool to generate and edit synthetic
+        location data. That unblocked development entirely, and it also turned out to be the better testing
+        story: I could author the exact scenario I wanted &mdash; two vehicles converging on one aisle, a
+        dropped sample, an implausibly fast movement &mdash; and reproduce it on demand, which recorded data
+        would not have let me do.
+      </p>
+
+      <h2 class="reveal">Where it got to</h2>
+      <p class="reveal">
+        I presented VRDT to the digital division once the first prototype worked, and then to the Chief
+        Executive Officer and Chief Digital Officer, who asked me to prepare pilot trials in two of the
+        client warehouses the company operated.
+      </p>
+
+      <figure class="reveal">
+        <img src="../assets/img/vr-digital-twin/presentation.jpg" alt="Presenting the project to the digital division" loading="lazy">
+        <figcaption>Presenting VRDT to the company's digital division after the first prototype.</figcaption>
+      </figure>
+
+      <p class="reveal">
+        The planned next steps were to work with the company's Sensors team on a pipeline for collecting
+        real location data, to run the pilot against that real data, and then to integrate the system with
+        the company's warehouses properly.
+      </p>
+
+    </div>
+
+    <nav class="pager reveal">
+      <a href="../index.html#work"><span>Back to</span><strong>All projects</strong></a>
+      <a href="robot-testing-simulator.html"><span>Next project</span><strong>Robot Testing Simulator &rarr;</strong></a>
+    </nav>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="shell">
+    <div class="foot-row">
+      <span>&copy; Eduard Baroyan</span>
+      <span><a href="mailto:eduardbaro4@gmail.com">eduardbaro4@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
